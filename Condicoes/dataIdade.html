@@ -54,17 +54,20 @@
       let formulario = document.getElementById('formulario');
       let resultadoDiv = document.getElementById('resultado');
       let idadeSpan = document.getElementById('idade');
+      let faixaIdade = document.getElementById('faixa');
 
       formulario.addEventListener('submit', function (event) {
         event.preventDefault();
 
         let dataNascimento = document.getElementById('dataNascimento').value;
         let idadeAtual = calcularIdade(dataNascimento);
+        let faixaAtual = calcularFaixa();
 
         idadeSpan.textContent = idadeAtual;
+        faixaIdade.textContent = faixaAtual
         resultadoDiv.style.display = 'block'; //faz aparecer o html que estava oculto.
       });
-
+    
       function calcularIdade(dataNascimento) {
         let hoje = new Date();
         let nascimento = new Date(dataNascimento);
@@ -75,22 +78,29 @@
         if (mesAtual < mesNascimento || (mesAtual === mesNascimento && hoje.getDate() < nascimento.getDate())) {
           idade--;
 
-        } else if (idade == 0 || idade <= 3){
-          document.getElementById('faixa').innerHTML = "Um Bebê"
-        }else if ((idade >3 && idade <=4) || (idade >4 && idade <= 7)){
-          document.getElementById('faixa').innerHTML = "Uma Criança"
-        }else if ((idade >7 && idade <=8) || (idade >8 && idade <= 12)){
-          document.getElementById('faixa').innerHTML = "Pré-adolescente"
-        }else if ((idade >12 && idade <=13) || (idade >13 && idade <= 19)){
-          document.getElementById('faixa').innerHTML = " Adolescente"
-        }else if ((idade >19 && idade <=20) || (idade >20 && idade <= 59)){
-          document.getElementById('faixa').innerHTML = " Adulto"
-        }else if ((idade >=60)){
-          document.getElementById('faixa').innerHTML = " Idoso"
-        }
         return idade;
       }
+    }
+
+
+function calcularFaixa(){
+if (idade == 0 || idade <= 3){
+          faixaIdade.innerHTML = "Um Bebê"
+        }else if ((idade >3 && idade <=4) || (idade >4 && idade <= 7)){
+          faixaIdade.innerHTML = "Uma Criança"
+        }else if ((idade >7 && idade <=8) || (idade >8 && idade <= 12)){
+          faixaIdade.innerHTML = "Pré-adolescente"
+        }else if ((idade >12 && idade <=13) || (idade >13 && idade <= 19)){
+          faixaIdade.innerHTML = " Adolescente"
+        }else if ((idade >19 && idade <=20) || (idade >20 && idade <= 59)){
+          faixaIdade.innerHTML = " Adulto"
+        }else if ((idade >=60)){
+          faixaIdade.innerHTML = " Idoso"
+        }
+}
     });
+
+
   </script>
 
 </body>
