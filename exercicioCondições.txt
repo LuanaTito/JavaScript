@@ -1,0 +1,13 @@
+Crie um formulário onde o usuário coloque 
+a sua data de nascimeto.
+
+Calcule quantos anos ele tem em qual e
+em qual faixa etária ele está classificado. 
+
+Idades: 
+de 0 a 3 anos -> Bebê
+de 4 a 7 anos - > Criança
+de 8 a 12 anos -> Pré-adolescente
+de 13 a 19 anos -> Adolescente
+de 20 a 59 anos -> Aduldo
+a cima de 60 anos -> Idoso

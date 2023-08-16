@@ -1,0 +1,34 @@
+1 - Primeiro você vai colocar em uma 
+variável o nome das cores da bandeira 
+do seu estado de nascimento.
+
+2 - Acesse o tamanho do array que foi 
+criado para ter o tamanho dele.
+
+3 - acesse cada uma das posições para 
+obter o valor.
+
+=========
+
+
+Exercício 02: Array
+Crie um script que permita solicitar e armazenar em um Array 
+as seguintes informações de uma pessoa:
+
+Nome
+Idade
+Sexo
+Cidade de nascimento
+
+Após a entrada dos dados, o script deve exibir somente 
+as seguintes informações: Nome, Idade e Cidade.
+
+
+==========
+
+
+
+1 -  Elaborar um programa que leia o nome de uma fruta 
+e um número. O programa deve repetir a exibição do 
+nome da fruta, de acordo com o número
+informado. 
